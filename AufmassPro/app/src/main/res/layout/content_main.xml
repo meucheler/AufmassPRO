@@ -31,7 +31,7 @@
             android:id="@+id/btnVerwaltung"
             android:background="#9fbf4e"
             android:textSize="40dp"
-            android:nestedScrollingEnabled="false" />
+            android:onClick="btnVerwClick" />
 
         <Button
             android:layout_weight="1"
@@ -40,7 +40,8 @@
             android:text="Aufmaß"
             android:id="@+id/btnAufmass"
             android:background="#4bafea"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+            android:onClick="btnAufClick" />
 
         <Button
             android:layout_weight="1"
@@ -49,7 +50,8 @@
             android:text="Buchhaltung"
             android:id="@+id/btnBuchhaltung"
             android:background="#f1b94a"
-            android:textSize="40dp" />
+            android:textSize="40dp"
+            android:onClick="btnBucClick"/>
 
     </LinearLayout>
 </RelativeLayout>
