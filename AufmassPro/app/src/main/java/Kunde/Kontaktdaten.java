@@ -8,6 +8,14 @@ public class Kontaktdaten {
     String telNr;
     String Fax;
 
+    @Override
+    public String toString() {
+        return "Kontaktdaten{" +
+                "eMail='" + eMail + '\'' +
+                ", telNr='" + telNr + '\'' +
+                ", Fax='" + Fax + '\'' +
+                '}';
+    }
     public Kontaktdaten(String eMail, String telNr, String fax) {
         this.eMail = eMail;
         this.telNr = telNr;
@@ -17,14 +25,7 @@ public class Kontaktdaten {
     public Kontaktdaten() {
     }
 
-    @Override
-    public String toString() {
-        return "Kontaktdaten{" +
-                "eMail='" + eMail + '\'' +
-                ", telNr='" + telNr + '\'' +
-                ", Fax='" + Fax + '\'' +
-                '}';
-    }
+
 
     public String geteMail() {
         return eMail;

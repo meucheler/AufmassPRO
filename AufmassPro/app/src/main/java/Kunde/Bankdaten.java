@@ -10,6 +10,17 @@ public class Bankdaten {
     String iban;
     String kto;
 
+    @Override
+    public String toString() {
+        return "Bankdaten{" +
+                "bankname='" + bankname + '\'' +
+                ", blz=" + blz +
+                ", bic='" + bic + '\'' +
+                ", iban='" + iban + '\'' +
+                ", kto='" + kto + '\'' +
+                '}';
+    }
+
     public Bankdaten() {
     }
 
@@ -21,16 +32,7 @@ public class Bankdaten {
         this.kto = kto;
     }
 
-    @Override
-    public String toString() {
-        return "Bankdaten{" +
-                "bankname='" + bankname + '\'' +
-                ", blz=" + blz +
-                ", bic='" + bic + '\'' +
-                ", iban='" + iban + '\'' +
-                ", kto='" + kto + '\'' +
-                '}';
-    }
+
 
     public String getBankname() {
         return bankname;

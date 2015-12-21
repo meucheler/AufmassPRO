@@ -10,6 +10,11 @@ public class Addresse {
     String straße;
     int nr;
 
+    @Override
+    public String toString() {
+        return straße+" "+nr+" "+plz+" "+ ort+" "+länderPräfix;
+    }
+
     public Addresse(int plz, String ort, String länderPräfix, String straße, int nr) {
         this.plz = plz;
         this.ort = ort;
@@ -21,10 +26,7 @@ public class Addresse {
     public Addresse() {
     }
 
-    @Override
-    public String toString() {
-        return straße+" "+nr+" "+plz+" "+ort+" "+länderPräfix;
-    }
+
 
     public int getPlz() {
         return plz;
