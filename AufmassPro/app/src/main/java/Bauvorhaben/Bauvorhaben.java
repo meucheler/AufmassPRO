@@ -4,7 +4,7 @@ package Bauvorhaben;
 import java.util.LinkedList;
 
 import Immobilie.Immobilie;
-import Kunde.Addresse;
+import Utils.Addresse;
 
 /**
  * Created by tobia_000 on 21.12.2015.

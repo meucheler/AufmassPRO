@@ -1,4 +1,4 @@
-package Kunde;
+package Utils;
 
 /**
  * Created by htl-ds-win7profNx64 on 14.12.2015.

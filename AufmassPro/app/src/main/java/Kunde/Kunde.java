@@ -1,5 +1,9 @@
 package Kunde;
 
+import Utils.Addresse;
+import Utils.Bankdaten;
+import Utils.Kontaktdaten;
+
 /**
  * Created by htl-ds-win7profNx64 on 14.12.2015.
  */
