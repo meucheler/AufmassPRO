@@ -6,19 +6,26 @@ package Utils;
 public class Addresse {
     int plz;
     String ort;
-    String länderPräfix;
+    String laenderPraefix;
     String straße;
     int nr;
 
     @Override
     public String toString() {
-        return straße+" "+nr+" "+plz+" "+ ort+" "+länderPräfix;
+        return straße+" "+nr+" "+plz+" "+ ort+" "+ laenderPraefix;
     }
 
-    public Addresse(int plz, String ort, String länderPräfix, String straße, int nr) {
+    public Addresse(int plz, String ort, String laenderPraefix, String straße, int nr) {
         this.plz = plz;
         this.ort = ort;
-        this.länderPräfix = länderPräfix;
+        this.laenderPraefix = laenderPraefix;
+        this.straße = straße;
+        this.nr = nr;
+    }
+
+    public Addresse(int plz, String ort, String straße, int nr) {
+        this.plz = plz;
+        this.ort = ort;
         this.straße = straße;
         this.nr = nr;
     }
@@ -44,12 +51,12 @@ public class Addresse {
         this.ort = ort;
     }
 
-    public String getLänderPräfix() {
-        return länderPräfix;
+    public String getLaenderPraefix() {
+        return laenderPraefix;
     }
 
-    public void setLänderPräfix(String länderPräfix) {
-        this.länderPräfix = länderPräfix;
+    public void setLaenderPraefix(String länderPräfix) {
+        this.laenderPraefix = länderPräfix;
     }
 
     public String getStraße() {

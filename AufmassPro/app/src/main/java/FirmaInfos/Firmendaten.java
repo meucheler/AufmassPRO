@@ -11,6 +11,7 @@ public class Firmendaten {
     String firmenbuchnummer;
     int dvrNr;
     String gerichtstand;
+    int festnetzNr;
 
     static int rechnungsNr;
 
@@ -81,5 +82,13 @@ public class Firmendaten {
 
     public void setGerichtstand(String gerichtstand) {
         this.gerichtstand = gerichtstand;
+    }
+
+    public int getFestnetzNr() {
+        return festnetzNr;
+    }
+
+    public void setFestnetzNr(int festnetzNr) {
+        this.festnetzNr = festnetzNr;
     }
 }

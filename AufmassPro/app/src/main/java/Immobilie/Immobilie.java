@@ -9,9 +9,11 @@ import Raum.Raum;
  */
 public class Immobilie {
     LinkedList<Raum> listRaum;
+    int immoId;
 
-    public Immobilie(LinkedList<Raum> listRaum) {
+    public Immobilie(LinkedList<Raum> listRaum, int immoId) {
         this.listRaum = listRaum;
+        this.immoId = immoId;
     }
 
     public Immobilie() {
@@ -23,5 +25,13 @@ public class Immobilie {
 
     public void setListRaum(LinkedList<Raum> listRaum) {
         this.listRaum = listRaum;
+    }
+
+    public int getImmoId() {
+        return immoId;
+    }
+
+    public void setImmoId(int immoId) {
+        this.immoId = immoId;
     }
 }

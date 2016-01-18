@@ -6,6 +6,7 @@ import java.util.LinkedList;
  * Created by tobia_000 on 21.12.2015.
  */
 public class Raum {
+    int raumId;
     String name;
     String bemerkung;
     LinkedList<Flaeche> listFlaeche;
@@ -13,7 +14,8 @@ public class Raum {
     public Raum() {
     }
 
-    public Raum(String name, String bemerkung, LinkedList<Flaeche> listFlaeche) {
+    public Raum(int raumId, String name, String bemerkung, LinkedList<Flaeche> listFlaeche) {
+        this.raumId = raumId;
         this.name = name;
         this.bemerkung = bemerkung;
         this.listFlaeche = listFlaeche;
@@ -41,5 +43,13 @@ public class Raum {
 
     public void setListFlaeche(LinkedList<Flaeche> listFlaeche) {
         this.listFlaeche = listFlaeche;
+    }
+
+    public int getRaumId() {
+        return raumId;
+    }
+
+    public void setRaumId(int raumId) {
+        this.raumId = raumId;
     }
 }
