@@ -4,18 +4,20 @@ package Utils;
  * Created by htl-ds-win7profNx64 on 14.12.2015.
  */
 public class Addresse {
+    int id;
     int plz;
     String ort;
     String laenderPraefix;
     String straße;
-    int nr;
+    String nr;
 
     @Override
     public String toString() {
         return straße+" "+nr+" "+plz+" "+ ort+" "+ laenderPraefix;
     }
 
-    public Addresse(int plz, String ort, String laenderPraefix, String straße, int nr) {
+    public Addresse(int id, int plz, String ort, String laenderPraefix, String straße, String nr) {
+        this.id = id;
         this.plz = plz;
         this.ort = ort;
         this.laenderPraefix = laenderPraefix;
@@ -23,7 +25,7 @@ public class Addresse {
         this.nr = nr;
     }
 
-    public Addresse(int plz, String ort, String straße, int nr) {
+    public Addresse(int plz, String ort, String straße, String nr) {
         this.plz = plz;
         this.ort = ort;
         this.straße = straße;
@@ -34,6 +36,13 @@ public class Addresse {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getPlz() {
         return plz;
@@ -67,11 +76,11 @@ public class Addresse {
         this.straße = straße;
     }
 
-    public int getNr() {
+    public String getNr() {
         return nr;
     }
 
-    public void setNr(int nr) {
+    public void setNr(String nr) {
         this.nr = nr;
     }
 }

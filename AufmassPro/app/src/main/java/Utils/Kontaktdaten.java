@@ -4,6 +4,7 @@ package Utils;
  * Created by htl-ds-win7profNx64 on 14.12.2015.
  */
 public class Kontaktdaten {
+    int id;
     String eMail;
     String telNr;
     String Fax;
@@ -16,7 +17,8 @@ public class Kontaktdaten {
                 ", Fax='" + Fax + '\'' +
                 '}';
     }
-    public Kontaktdaten(String eMail, String telNr, String fax) {
+    public Kontaktdaten(int id, String eMail, String telNr, String fax) {
+        this.id = id;
         this.eMail = eMail;
         this.telNr = telNr;
         Fax = fax;
@@ -26,6 +28,13 @@ public class Kontaktdaten {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String geteMail() {
         return eMail;

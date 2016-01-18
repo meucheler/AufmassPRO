@@ -10,7 +10,7 @@ public class Firmendaten {
     String uidNr;
     String firmenbuchnummer;
     int dvrNr;
-    String gerichtstand;
+    String gerichtsstand;
     int festnetzNr;
 
     static int rechnungsNr;
@@ -18,14 +18,14 @@ public class Firmendaten {
     public Firmendaten() {
     }
 
-    public Firmendaten(String firmenname, Geschaeftsfuehrer gefuehrer, String firmenbuchgericht, String uidNr, String firmenbuchnummer, int dvrNr, String gerichtstand) {
+    public Firmendaten(String firmenname, Geschaeftsfuehrer gefuehrer, String firmenbuchgericht, String uidNr, String firmenbuchnummer, int dvrNr, String gerichtsstand) {
         Firmenname = firmenname;
         this.gefuehrer = gefuehrer;
         this.firmenbuchgericht = firmenbuchgericht;
         this.uidNr = uidNr;
         this.firmenbuchnummer = firmenbuchnummer;
         this.dvrNr = dvrNr;
-        this.gerichtstand = gerichtstand;
+        this.gerichtsstand = gerichtsstand;
     }
 
     public String getFirmenname() {
@@ -76,12 +76,12 @@ public class Firmendaten {
         this.dvrNr = dvrNr;
     }
 
-    public String getGerichtstand() {
-        return gerichtstand;
+    public String getGerichtsstand() {
+        return gerichtsstand;
     }
 
-    public void setGerichtstand(String gerichtstand) {
-        this.gerichtstand = gerichtstand;
+    public void setGerichtsstand(String gerichtsstand) {
+        this.gerichtsstand = gerichtsstand;
     }
 
     public int getFestnetzNr() {
