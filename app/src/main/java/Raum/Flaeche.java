@@ -6,7 +6,7 @@ package Raum;
 public class Flaeche {
     int laenge;
     int breite;
-// kevin ist dumm//
+// kevin ist richtig extrem dumm//
     public Flaeche() {
     }
 
