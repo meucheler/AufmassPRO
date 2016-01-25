@@ -85,16 +85,16 @@ public class Logik {
 
     //--------------------------Aufmaß------------------------//
     public LinkedList<Kunde> getKunden(){
-
+        return null;
     }
     public LinkedList<Bauvorhaben> getBauvorhaben(){
-
+        return null;
     }
     public LinkedList<Immobilie> getImmobilie(){
-
+        return null;
     }
     public LinkedList<Raum> getRaeume(int immoId){
-
+        return null;
     }
     public void bearbeiteRaumAufmaß(int immoID, Raum r){
      //supa kevin!
