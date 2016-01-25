@@ -13,18 +13,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:layout_weight="1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Benutzerinfo"
-            android:id="@+id/btnBenutzerinfo"
-            android:textSize="40dp"/>
+        android:layout_height="match_parent">
 
         <Button
             android:layout_weight="1"
@@ -38,8 +27,25 @@
             android:layout_weight="1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Projekte"
+            android:text="Bauvorhaben"
             android:id="@+id/btnProjekte"
             android:textSize="40dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Immobilien"
+            android:id="@+id/btnImmobilien"
+            android:layout_weight="1"
+            android:textSize="40dp" />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Benutzerinfo"
+            android:id="@+id/btnBenutzerinfo"
+            android:textSize="40dp"/>
     </LinearLayout>
+
 </RelativeLayout>
