@@ -102,27 +102,30 @@ public class Logik {
 
 //-------------Buchhaltung---------------//
 
-    public LinkedList<Rechnung> getRechnungen(){
-
+    /*public LinkedList<Rechnung> getRechnungen(){
+    *    return null;
     }
+    */
     public void bearbeiteRechnung(int reID){
 
     }
     public void entferneRechnung(int reID){
 
     }
-    public LinkedList<Angebot> getAngebot(){
-
-    }
+    /*public LinkedList<Angebot> getAngebot(){
+    *    return null;
+    *}
+    */
     public void bearbeiteAngebot(int angID){
 
     }
     void entferneAngebot(int angID){
 
     }
-    public LinkedList<Aufmass> getAufmass(){
-        return null;
-    }
+    /*public LinkedList<Aufmass> getAufmass(){
+    *    return null;
+    *}
+    */
     public void bearbeiteAufmass(int aufID){
 
     }
