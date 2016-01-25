@@ -13,7 +13,7 @@ public class Kunde {
     Addresse addresse;
     Kontaktdaten kontaktdaten;
     int kundenNr;
-    int ustID;
+    String ustID;
     Bankdaten bankdaten;
 
     @Override
@@ -32,7 +32,7 @@ public class Kunde {
     public Kunde() {
     }
 
-    public Kunde(Ansprechperson ansprechperson, String zusatzDaten, Addresse addresse, Kontaktdaten kontaktdaten, int kundenNr, int ustID, Bankdaten bankdaten) {
+    public Kunde(Ansprechperson ansprechperson, String zusatzDaten, Addresse addresse, Kontaktdaten kontaktdaten, int kundenNr, String ustID, Bankdaten bankdaten) {
         this.ansprechperson = ansprechperson;
         this.zusatzDaten = zusatzDaten;
         this.addresse = addresse;
@@ -82,11 +82,11 @@ public class Kunde {
         this.kundenNr = kundenNr;
     }
 
-    public int getUstID() {
+    public String getUstID() {
         return ustID;
     }
 
-    public void setUstID(int ustID) {
+    public void setUstID(String ustID) {
         this.ustID = ustID;
     }
 

@@ -12,10 +12,9 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "aufmasspro.db";
     private static final int DATABASE_VERSION = 1;
 
-    //FOREIGN KEYS SIND NOCH NICHT VORHANDEN!!!!!!!!!!
     //Table Names
     private static final String TABLE_BENUTZERINFO = "Benutzerinfo";
-    private static final String TABLE_KUNDE = "Kunde";
+    static final String TABLE_KUNDE = "Kunde";
     private static final String TABLE_ADRESSE = "Adresse";
     private static final String TABLE_BANKDATEN = "Bankdaten";
     private static final String TABLE_KONTAKTDATEN = "Kontaktdaten";
@@ -42,15 +41,15 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String BI_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Kunde
-    private static final String KU_COLUMN_KUNDEN_NR = "KdNr";
-    private static final String KU_COLUMN_VORNAME = "Vorname";
-    private static final String KU_COLUMN_NACHNAME = "Nachname";
-    private static final String KU_COLUMN_TITEL = "Titel";
-    private static final String KU_COLUMN_USTID = "UstID";
-    private static final String KU_COLUMN_ZUSATZDATEN = "Zusatzdaten";
-    private static final String KU_FK_COLUMN_ADRESSE = "Adresse";
-    private static final String KU_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
-    private static final String KU_FK_COLUMN_BANKDATEN = "Bankdaten ID";
+    static final String KU_COLUMN_KUNDEN_NR = "KdNr";
+    static final String KU_COLUMN_VORNAME = "Vorname";
+    static final String KU_COLUMN_NACHNAME = "Nachname";
+    static final String KU_COLUMN_TITEL = "Titel";
+    static final String KU_COLUMN_USTID = "UstID";
+    static final String KU_COLUMN_ZUSATZDATEN = "Zusatzdaten";
+    static final String KU_FK_COLUMN_ADRESSE = "Adresse";
+    static final String KU_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
+    static final String KU_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Bauvorhaben
     private static final String BV_COLUMN_ID = "ID";
