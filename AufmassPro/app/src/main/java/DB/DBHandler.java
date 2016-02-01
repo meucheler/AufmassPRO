@@ -12,33 +12,34 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "aufmasspro.db";
     private static final int DATABASE_VERSION = 1;
 
+    //OnUpgrade sollte nochmal angesehen werden!!!!
     //Table Names
-    private static final String TABLE_BENUTZERINFO = "Benutzerinfo";
+    static final String TABLE_BENUTZERINFO = "Benutzerinfo";
     static final String TABLE_KUNDE = "Kunde";
-    private static final String TABLE_ADRESSE = "Adresse";
-    private static final String TABLE_BANKDATEN = "Bankdaten";
-    private static final String TABLE_KONTAKTDATEN = "Kontaktdaten";
-    private static final String TABLE_BAUVORHABEN = "Bauvorhaben";
-    private static final String TABLE_IMMOBILIE = "Immobilie";
-    private static final String TABLE_RAUM = "Raum";
+    static final String TABLE_ADRESSE = "Adresse";
+    static final String TABLE_BANKDATEN = "Bankdaten";
+    static final String TABLE_KONTAKTDATEN = "Kontaktdaten";
+    static final String TABLE_BAUVORHABEN = "Bauvorhaben";
+    static final String TABLE_IMMOBILIE = "Immobilie";
+    static final String TABLE_RAUM = "Raum";
 
     //"Normalisierte" Tables
-    private static final String NORM_TABLE_KUNDEN_IMMOBILIE = "Kunden Immobilie";
-    private static final String NORM_TABLE_IMMOBILIE_RAUM = "Immobilie Raum";
+    static final String NORM_TABLE_KUNDEN_IMMOBILIE = "Kunden Immobilie";
+    static final String NORM_TABLE_IMMOBILIE_RAUM = "Immobilie Raum";
 
     //Columns Benutzerinfo
-    private static final String BI_COLUMN_FIRMENNAME = "Firmenname";
-    private static final String BI_COLUMN_VORNAME = "Vorname";
-    private static final String BI_COLUMN_NACHNAME = "Nachname";
-    private static final String BI_COLUMN_FIRMENBUCHGERICHT = "Firmenbuchgericht";
-    private static final String BI_COLUMN_UIDNR = "UIDNr";
-    private static final String BI_COLUMN_FIRMENBUCHNR = "Firmenbuchnr.";
-    private static final String BI_COLUMN_DVNR = "DVRNr";
-    private static final String BI_COLUMN_GERICHTSSTAND = "Gerichtsstand";
-    private static final String BI_COLUMN_FESTNETZNR = "Festnetznr.";
-    private static final String BI_FK_COLUMN_ADRESSE = "Adresse ID";
-    private static final String BI_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
-    private static final String BI_FK_COLUMN_BANKDATEN = "Bankdaten ID";
+    static final String BI_COLUMN_FIRMENNAME = "Firmenname";
+    static final String BI_COLUMN_VORNAME = "Vorname";
+    static final String BI_COLUMN_NACHNAME = "Nachname";
+    static final String BI_COLUMN_FIRMENBUCHGERICHT = "Firmenbuchgericht";
+    static final String BI_COLUMN_UIDNR = "UIDNr";
+    static final String BI_COLUMN_FIRMENBUCHNR = "Firmenbuchnr.";
+    static final String BI_COLUMN_DVNR = "DVRNr";
+    static final String BI_COLUMN_GERICHTSSTAND = "Gerichtsstand";
+    static final String BI_COLUMN_FESTNETZNR = "Festnetznr.";
+    static final String BI_FK_COLUMN_ADRESSE = "Adresse ID";
+    static final String BI_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
+    static final String BI_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Kunde
     static final String KU_COLUMN_KUNDEN_NR = "KdNr";
@@ -52,55 +53,55 @@ public class DBHandler extends SQLiteOpenHelper {
     static final String KU_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Bauvorhaben
-    private static final String BV_COLUMN_ID = "ID";
-    private static final String BV_COLUMN_KDNR = "KdNr";
-    private static final String BV_COLUMN_BESCHREIBUNG = "Beschreibung";
-    private static final String BV_COLUMN_NAME = "Name";
-    private static final String BV_COLUMN_ART = "Art";
-    private static final String BV_FK_COLUMN_IMMOBILIE = "KdNr + ImmoID";
+    static final String BV_COLUMN_ID = "ID";
+    static final String BV_COLUMN_KDNR = "KdNr";
+    static final String BV_COLUMN_BESCHREIBUNG = "Beschreibung";
+    static final String BV_COLUMN_NAME = "Name";
+    static final String BV_COLUMN_ART = "Art";
+    static final String BV_FK_COLUMN_IMMOBILIE = "KdNr + ImmoID";
 
     //Columns Immobilie
-    private static final String IM_COLUMN_ID = "ID";
-    private static final String IM_FK_COLUMN_RAUM = "ImmoID + RaumID";
+    static final String IM_COLUMN_ID = "ID";
+    static final String IM_FK_COLUMN_RAUM = "ImmoID + RaumID";
 
     //Columns Raum
-    private static final String RA_COLUMN_ID = "ID";
-    private static final String RA_COLUMN_NAME = "Name";
-    private static final String RA_COLUMN_BEMERKUNG = "Bemerkung";
-    private static final String RA_COLUMN_FLAECHE = "Gesamt Flaeche";
+    static final String RA_COLUMN_ID = "ID";
+    static final String RA_COLUMN_NAME = "Name";
+    static final String RA_COLUMN_BEMERKUNG = "Bemerkung";
+    static final String RA_COLUMN_FLAECHE = "Gesamt Flaeche";
 
     //Columns Adresse
-    private static final String AD_COLUMN_ID = "ID";
-    private static final String AD_COLUMN_PLZ = "PLZ";
-    private static final String AD_COLUMN_ORT = "Ort";
-    private static final String AD_COLUMN_LAND = "Land";
-    private static final String AD_COLUMN_STRASSE = "Strasse";
-    private static final String AD_COLUMN_NR = "Nr";
+    static final String AD_COLUMN_ID = "ID";
+    static final String AD_COLUMN_PLZ = "PLZ";
+    static final String AD_COLUMN_ORT = "Ort";
+    static final String AD_COLUMN_LAND = "Land";
+    static final String AD_COLUMN_STRASSE = "Strasse";
+    static final String AD_COLUMN_NR = "Nr";
 
     //Columns Bankdaten
-    private static final String BA_COLUMN_IBAN = "IBAN";
-    private static final String BA_COLUMN_BIC = "BIC";
-    private static final String BA_COLUMN_KTO = "KTO";
-    private static final String BA_COLUMN_BLZ = "BLZ";
-    private static final String BA_COLUMN_BANKNAME = "Bankname";
+    static final String BA_COLUMN_IBAN = "IBAN";
+    static final String BA_COLUMN_BIC = "BIC";
+    static final String BA_COLUMN_KTO = "KTO";
+    static final String BA_COLUMN_BLZ = "BLZ";
+    static final String BA_COLUMN_BANKNAME = "Bankname";
 
     //Columns Kontakdaten
-    private static final String KA_COLUMN_ID = "ID";
-    private static final String KA_COLUMN_EMAIL = "E-Mail";
-    private static final String KA_COLUMN_TELNR = "Tel.-Nr.";
-    private static final String KA_COLUMN_FAX = "Fax";
+    static final String KA_COLUMN_ID = "ID";
+    static final String KA_COLUMN_EMAIL = "E-Mail";
+    static final String KA_COLUMN_TELNR = "Tel.-Nr.";
+    static final String KA_COLUMN_FAX = "Fax";
 
     //Columns Kunden Immobilie
-    private static final String NORM_KI_COLUMN_KD_IMMO = "KdNr + ImmoID";
-    private static final String NORM_KI_COLUMN_KDNR = "KdNr";
-    private static final String NORM_KI_COLUMN_IMMOID = "Immobilien ID";
+    static final String NORM_KI_COLUMN_KD_IMMO = "KdNr + ImmoID";
+    static final String NORM_KI_COLUMN_KDNR = "KdNr";
+    static final String NORM_KI_COLUMN_IMMOID = "Immobilien ID";
 
     //Columns Immobilie Raum
-    private static final String NORM_IR_COLUMN_IMMO_RAUM = "ImmoID + RaumID";
-    private static final String NORM_IR_COLUMN_IMMOID = "Immobilien ID";
-    private static final String NORM_IR_COLUMN_RAUMID = "Raum ID";
+    static final String NORM_IR_COLUMN_IMMO_RAUM = "ImmoID + RaumID";
+    static final String NORM_IR_COLUMN_IMMOID = "Immobilien ID";
+    static final String NORM_IR_COLUMN_RAUMID = "Raum ID";
 
-
+    /**
     //Create Statement Benutzerinfo
     private static final String CREATE_TABLE_BENUTZERINFO = "create table " + TABLE_BENUTZERINFO
             + "(" + BI_COLUMN_FIRMENNAME + " varchar(25) primary key, " + BI_COLUMN_VORNAME + " varchar(25), "
@@ -168,6 +169,7 @@ public class DBHandler extends SQLiteOpenHelper {
             + "(" + NORM_IR_COLUMN_IMMO_RAUM + " varchar(50), "
             + " FOREIGN KEY (" + NORM_IR_COLUMN_IMMOID + ") REFERENCES " + TABLE_IMMOBILIE + "(" + IM_COLUMN_ID + "), "
             + " FOREIGN KEY (" + NORM_IR_COLUMN_RAUMID + ") REFERENCES " + TABLE_RAUM + "(" + RA_COLUMN_ID + "));";
+    */
 
     public DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -176,31 +178,31 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Die Datenbank wird mit den oben angelegten Tables erzeugt
-        db.execSQL(CREATE_TABLE_BENUTZERINFO);
-        db.execSQL(CREATE_TABLE_KUNDE);
-        db.execSQL(CREATE_TABLE_BAUVORHABEN);
-        db.execSQL(CREATE_TABLE_IMMOBILIE);
-        db.execSQL(CREATE_TABLE_RAUM);
-        db.execSQL(CREATE_TABLE_ADRESSE);
-        db.execSQL(CREATE_TABLE_KONTAKDATEN);
-        db.execSQL(CREATE_TABLE_BANKDATEN);
-        db.execSQL(CREATE_TABLE_KUNDE_IMMOBILIE);
-        db.execSQL(CREATE_TABLE_IMMOBILIE_RAUM);
+        db.execSQL(SQLBenutzerinfo.SQL_CREATE);
+        db.execSQL(SQLKunde.SQL_CREATE);
+        db.execSQL(SQLBauvorhaben.SQL_CREATE);
+        db.execSQL(SQLImmobilie.SQL_CREATE);
+        db.execSQL(SQLRaum.SQL_CREATE);
+        db.execSQL(SQLAdresse.SQL_CREATE);
+        db.execSQL(SQLKontaktdaten.SQL_CREATE);
+        db.execSQL(SQLBankdaten.SQL_CREATE);
+        db.execSQL(SQLKundenImmbolien.SQL_CREATE);
+        db.execSQL(SQLImmobilieRaum.SQL_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //Die Tables werden gedroped
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BANKDATEN);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_RAUM);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_IMMOBILIE);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_KONTAKTDATEN);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_ADRESSE);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_KUNDE);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BAUVORHABEN);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BENUTZERINFO);
-        db.execSQL("DROP TABLE IF EXISTS " + NORM_TABLE_KUNDEN_IMMOBILIE);
-        db.execSQL("DROP TABLE IF EXISTS " + NORM_TABLE_IMMOBILIE_RAUM);
+        db.execSQL(SQLBankdaten.SQL_DROP);
+        db.execSQL(SQLRaum.SQL_DROP);
+        db.execSQL(SQLImmobilie.SQL_DROP);
+        db.execSQL(SQLKontaktdaten.SQL_DROP);
+        db.execSQL(SQLAdresse.SQL_DROP);
+        db.execSQL(SQLKunde.SQL_DROP);
+        db.execSQL(SQLBauvorhaben.SQL_DROP);
+        db.execSQL(SQLBenutzerinfo.SQL_DROP);
+        db.execSQL(SQLKundenImmbolien.SQL_DROP);
+        db.execSQL(SQLImmobilieRaum.SQL_DROP);
 
         //Die Tables werden wieder angelegt
         onCreate(db);
