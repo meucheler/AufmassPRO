@@ -1,6 +1,7 @@
 package mikekevinsebitobi.aufmasspro;
 
-import android.app.ActionBar;
+
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,9 +15,9 @@ public class ActVerwaltung extends AppCompatActivity {
 
         //Action Bar
 
-        //ActionBar actBar = getActionBar();
-        //actBar.setTitle("ActVerwaltung");
-        //actBar.show();
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("ActVerwaltung");
+
     }
 
     @Override
