@@ -18,15 +18,8 @@ public class Kunde {
 
     @Override
     public String toString() {
-        return "Kunde{" +
-                "ansprechperson=" + ansprechperson +
-                ", zusatzDaten='" + zusatzDaten + '\'' +
-                ", addresse=" + addresse +
-                ", kontaktdaten=" + kontaktdaten +
-                ", kundenNr=" + kundenNr +
-                ", ustID=" + ustID +
-                ", bankdaten=" + bankdaten +
-                '}';
+        return  "" + kundenNr + ansprechperson.toString() ;
+
     }
 
     public Kunde() {
