@@ -80,9 +80,9 @@ public class Logik {
     public void entferneRaumAufmass(int raumID){
 
     }
-    public void bearbeiteBenutzerinfoAufmass(Firmendaten f){
-
-    }
+    //public void bearbeiteBenutzerinfo(Firmendaten f){
+    //
+    //}
     //--------------------------------------------------//
     public LinkedList<Kunde> getKunde(){
         return null;
@@ -93,9 +93,9 @@ public class Logik {
     public LinkedList<Immobilie> getImmobilien(){
         return null;
     }
-    public LinkedList<Raum> getRäume(int immoID){
-        return null;
-    }
+    //public LinkedList<Raum> getRaeume(int immoID){
+    //    return null;
+    //}
     public void bearbeiteRaum(int immoID, Raum r){
 
     }
@@ -110,17 +110,20 @@ public class Logik {
     LinkedList<Kunde> llKunde = new LinkedList<Kunde>();
 
     Ansprechperson a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
+    Ansprechperson a2 = new Ansprechperson("Tobias", "Doppler" , "DDr.");
+    Ansprechperson a3 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
     Addresse adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
+    Addresse adress2 = new Addresse(4600,"Wels", "Stadtplatz", "3");
     Bankdaten b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
     Kontaktdaten kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
     Kunde k1 = new Kunde(a1, "Zusatzdaten lol", adress1, kon1, 1, "20%", b1);
-
+    Kunde k2 = new Kunde(a2,"Zusatzdada", adress2, kon1,2 ,"15%",b1);
+    Kunde k3 = new Kunde(a3,"Zusatz", adress1, kon1,2, "15%", b1);
 
     public LinkedList<Kunde> getKunden(){
         llKunde.add(k1);
-        llKunde.add(k1);
-        llKunde.add(k1);
-        llKunde.add(k1);
+        llKunde.add(k2);
+        llKunde.add(k3);
         return llKunde;
     }
 
