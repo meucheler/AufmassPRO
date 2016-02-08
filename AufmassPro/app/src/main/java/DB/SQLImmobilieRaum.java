@@ -6,9 +6,11 @@ package DB;
  */
 public class SQLImmobilieRaum {
 
-    public static final String SQL_DROP = "DROP TABLE I EXISTS " + DBHandler.NORM_TABLE_IMMOBILIE_RAUM;
+    public static final String SQL_DROP = "DROP TABLE IF EXISTS " + DBHandler.NORM_TABLE_IMMOBILIE_RAUM;
     public static final String SQL_CREATE = "create table " + DBHandler.NORM_TABLE_IMMOBILIE_RAUM
             + "(" + DBHandler.NORM_IR_COLUMN_IMMO_RAUM + " varchar(50), "
+            + DBHandler.NORM_IR_COLUMN_IMMOID + " number(10), "
+            + DBHandler.NORM_IR_COLUMN_RAUMID + " number(10), "
             + " FOREIGN KEY (" + DBHandler.NORM_IR_COLUMN_IMMOID + ") REFERENCES " + DBHandler.TABLE_IMMOBILIE + "(" + DBHandler.IM_COLUMN_ID + "), "
             + " FOREIGN KEY (" + DBHandler.NORM_IR_COLUMN_RAUMID + ") REFERENCES " + DBHandler.TABLE_RAUM + "(" + DBHandler.RA_COLUMN_ID + "));";
 

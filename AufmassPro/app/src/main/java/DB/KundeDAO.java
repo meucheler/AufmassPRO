@@ -17,7 +17,7 @@ import Utils.Kontaktdaten;
  * Created by tobia_000 on 25.01.2016.
  */
 public class KundeDAO extends DBDAO{
-
+//Diese Klasse wird vorlaeufig nicht benoetigt
     private static final String WHERE_ID_EQUALS = DBHandler.KU_COLUMN_KUNDEN_NR;
 
     public KundeDAO(Context context){

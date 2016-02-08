@@ -1,12 +1,15 @@
 package mikekevinsebitobi.aufmasspro;
 
 import android.app.ActionBar;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import DB.DBHandler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
         //actBar.setTitle("Home");
         //actBar.show();
 
-    }
+        DBHandler dbHandler = new DBHandler(this);
+        SQLiteDatabase db = dbHandler.getWritableDatabase();
 
+    }
 
 
     @Override
