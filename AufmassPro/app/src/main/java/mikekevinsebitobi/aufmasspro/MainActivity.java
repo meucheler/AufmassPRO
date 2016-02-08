@@ -4,6 +4,7 @@ package mikekevinsebitobi.aufmasspro;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,9 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Action Bar
-        ActionBar actBar = getSupportActionBar();
-        actBar.setTitle("Home");
-        actBar.show();
+        //ActionBar actBar = getSupportActionBar();
+        //actBar.setTitle("Home");
 
         final Button btnVerwalt = (Button) findViewById(R.id.btnVerwaltung);
         final Button btnAufma= (Button) findViewById(R.id.btnAufmass);
