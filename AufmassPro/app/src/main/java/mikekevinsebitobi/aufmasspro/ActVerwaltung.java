@@ -20,6 +20,7 @@ public class ActVerwaltung extends AppCompatActivity {
 
         ActionBar actBar = getSupportActionBar();
         actBar.setTitle("ActVerwaltung");
+        actBar.setDisplayHomeAsUpEnabled(true);
 
         //Buttons
         final Button btnKunden = (Button) findViewById(R.id.btnKunden);
