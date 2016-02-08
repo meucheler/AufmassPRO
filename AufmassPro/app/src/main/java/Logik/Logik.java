@@ -93,7 +93,7 @@ public class Logik {
     public LinkedList<Immobilie> getImmobilien(){
         return null;
     }
-    public LinkedList<Raum> getRäume(int immoID){
+    public LinkedList<Raum> getRaeume(int immoID){
         return null;
     }
     public void bearbeiteRaum(int immoID, Raum r){
@@ -141,11 +141,6 @@ public class Logik {
     public LinkedList<Immobilie> getImmobilie(){
         llImmo12.add(ba1);
         return llImmo12;
-    }
-
-
-    public LinkedList<Raum> getRaeume(int immoId){
-        return null;
     }
     public void bearbeiteRaumAufmaß(int immoID, Raum r){
         //supa kevin!
