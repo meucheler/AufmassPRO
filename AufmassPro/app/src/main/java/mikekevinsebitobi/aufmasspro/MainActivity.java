@@ -9,8 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import DB.DBHandler;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -55,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         DBHandler dbHandler = new DBHandler(this);
         SQLiteDatabase db = dbHandler.getWritableDatabase();
 
-    }
 
 
     @Override

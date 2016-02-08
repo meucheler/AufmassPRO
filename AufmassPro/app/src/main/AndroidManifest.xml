@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActVerwaltung"></activity>
+        <activity android:name=".ActListeKunden"></activity>
     </application>
 
 </manifest>

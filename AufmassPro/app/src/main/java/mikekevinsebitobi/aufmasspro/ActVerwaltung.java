@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 
-
 public class ActVerwaltung extends AppCompatActivity {
 
     @Override
@@ -22,9 +21,10 @@ public class ActVerwaltung extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_act_verwalt, menu);
+        getMenuInflater().inflate(R.menu.menu_act_verwalt,menu);
         return true;
     }
+
 
     //ActionBar
     //ActionBar bar = getSupportActionBar();

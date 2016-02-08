@@ -1,16 +1,25 @@
 package Logik;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 import Bauvorhaben.Bauvorhaben;
+import DB.DBHandler;
 import FirmaInfos.Firmendaten;
 import Immobilie.Immobilie;
 import Kunde.Ansprechperson;
 import Kunde.Kunde;
 import Raum.Raum;
+import DB.DBDAO;
+import DB.KundeDAO;
+import DB.SQLKunde;
+import Utils.Addresse;
+import Utils.Bankdaten;
+import Utils.Kontaktdaten;
+
 /**
  * Created by miken on 01.02.2016.
  */
@@ -22,18 +31,19 @@ public class Logik {
      */
 
 
-    /**public void erzeugeKunde(Kunde kunde){
+    public void erzeugeKunde(Kunde kunde){
+        //ContentValues values = new ContentValues();
 
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_PRODUCTNAME, kunde.getProductName());
-        values.put(COLUMN_QUANTITY, product.getQuantity());
+     //   values.put(DBHandler.KU_COLUMN_VORNAME, kunde.getAnsprechperson().getVorname());
+      //  values.put(DBHandler.KU_COLUMN_NACHNAME, kunde.getAnsprechperson().getNachname());
+      //  values.put(DBHandler.KU_COLUMN_TITEL, kunde.getAnsprechperson().getTitel());
+    //    values.put(DBHandler.KU_COLUMN_ZUSATZDATEN, kunde.getZusatzDaten());
 
-        SQLiteDatabase db = this.getWritableDatabase();
 
-        db.insert(TABLE_PRODUCTS, null, values);
-        db.close();
+       // db.insert(DBHandler.TABLE_KUNDE, null, values);
+       // db.close();
 
-    }*/
+    }
     public void bearbeiteKunde(Kunde k){
 
     }
@@ -97,15 +107,47 @@ public class Logik {
     }
 
     //--------------------------Aufmaß------------------------//
+    LinkedList<Kunde> llKunde = new LinkedList<Kunde>();
+
+    Ansprechperson a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
+    Ansprechperson a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
+    Ansprechperson a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
+    Ansprechperson a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
+    Addresse adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
+    Bankdaten b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
+    Kontaktdaten kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
+    Kunde k1 = new Kunde(a1, "Zusatzdaten", adress1, kon1, 1, "20%", b1);
+    Kunde k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
+    Kunde k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
+    Kunde k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
     public LinkedList<Kunde> getKunden(){
-        return null;
+        llKunde.add(k1);
+        llKunde.add(k2);
+        llKunde.add(k3);
+        llKunde.add(k4);
+        return llKunde;
     }
+
+    LinkedList<Immobilie> llImmbo = new LinkedList<Immobilie>();
+    Immobilie im1 = new Immobilie();
+    Bauvorhaben bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibun (hier)","Bauvorhaben 1","Schwierig", llImmbo );
+    LinkedList<Bauvorhaben> llBauvo = new LinkedList<Bauvorhaben>();
+
     public LinkedList<Bauvorhaben> getBauvorhaben(){
-        return null;
+        llBauvo.add(bvh);
+        llBauvo.add(bvh);
+        llBauvo.add(bvh);
+        return llBauvo;
     }
+    LinkedList<Immobilie> llImmo12 = new LinkedList<Immobilie>();
+    LinkedList<Raum> llRau = new LinkedList<Raum>();
+    Immobilie ba1 = new Immobilie(llRau, 2);
     public LinkedList<Immobilie> getImmobilie(){
-        return null;
+        llImmo12.add(ba1);
+        return llImmo12;
     }
+
+
     public LinkedList<Raum> getRaeume(int immoId){
         return null;
     }
