@@ -137,13 +137,13 @@ public class Logik {
     }
     LinkedList<Immobilie> llImmo12 = new LinkedList<Immobilie>();
     LinkedList<Raum> llRau = new LinkedList<Raum>();
-    Immobilie b1 = new Immobilie(llRau, 2);
+    Immobilie ba1 = new Immobilie(llRau, 2);
     public LinkedList<Immobilie> getImmobilie(){
-        llImmo12.add(b1);
+        llImmo12.add(ba1);
         return llImmo12;
     }
 
-    
+
     public LinkedList<Raum> getRaeume(int immoId){
         return null;
     }
