@@ -1,7 +1,10 @@
 package mikekevinsebitobi.aufmasspro;
 
-import android.app.ActionBar;
+
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
@@ -15,20 +18,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button button = (Button) findViewById(R.id.btnVerwaltung);
-        final Button button1= (Button) findViewById(R.id.btnAufmass);
-        final Button button2= (Button) findViewById(R.id.btnBuchhaltung);
+        //Action Bar
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("Home");
+        actBar.show();
+
+        final Button btnVerwalt = (Button) findViewById(R.id.btnVerwaltung);
+        final Button btnAufma= (Button) findViewById(R.id.btnAufmass);
+        final Button btnBuchh= (Button) findViewById(R.id.btnBuchhaltung);
 
         //Verwaltung CLICKEVENT
-        button.setOnClickListener(new View.OnClickListener() {
+        btnVerwalt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                setContentView(R.layout.activity_act_verwaltung);
+                startIntentActVerwalt();
+
             }
         });
 
         //Aufmass CLICKEVENT
-        button1.setOnClickListener(new View.OnClickListener() {
+        btnAufma.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
 
@@ -36,18 +45,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Buchhaltung CLICKEVENT
-        button2.setOnClickListener(new View.OnClickListener() {
+        btnBuchh.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
 
             }
         });
 
-        //Action Bar
 
-        //ActionBar actBar = getActionBar();
-        //actBar.setTitle("Home");
-        //actBar.show();
+
+
 
     }
 
@@ -82,5 +89,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void startIntentActVerwalt(){
+        Intent intent = new Intent(this, ActVerwaltung.class);
+        startActivity(intent);
     }
 }
