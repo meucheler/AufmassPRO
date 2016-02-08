@@ -16,6 +16,9 @@ import Raum.Raum;
 import DB.DBDAO;
 import DB.KundeDAO;
 import DB.SQLKunde;
+import Utils.Addresse;
+import Utils.Bankdaten;
+import Utils.Kontaktdaten;
 
 /**
  * Created by miken on 01.02.2016.
@@ -29,7 +32,7 @@ public class Logik {
 
 
     public void erzeugeKunde(Kunde kunde){
-        ContentValues values = new ContentValues();
+        //ContentValues values = new ContentValues();
 
      //   values.put(DBHandler.KU_COLUMN_VORNAME, kunde.getAnsprechperson().getVorname());
       //  values.put(DBHandler.KU_COLUMN_NACHNAME, kunde.getAnsprechperson().getNachname());
@@ -104,8 +107,21 @@ public class Logik {
     }
 
     //--------------------------Aufmaß------------------------//
+    LinkedList<Kunde> llKunde = new LinkedList<Kunde>();
+
+    Ansprechperson a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
+    Addresse adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
+    Bankdaten b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
+    Kontaktdaten kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
+    Kunde k1 = new Kunde(a1, "Zusatzdaten lol", adress1, kon1, 1, "20%", b1);
+
+
     public LinkedList<Kunde> getKunden(){
-        return null;
+        llKunde.add(k1);
+        llKunde.add(k1);
+        llKunde.add(k1);
+        llKunde.add(k1);
+        return llKunde;
     }
     public LinkedList<Bauvorhaben> getBauvorhaben(){
         return null;
