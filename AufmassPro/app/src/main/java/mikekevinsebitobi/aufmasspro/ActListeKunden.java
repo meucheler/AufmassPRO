@@ -47,4 +47,7 @@ public class ActListeKunden extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu_liste_kunden, menu);
         return true;
     }
+
+
+
 }

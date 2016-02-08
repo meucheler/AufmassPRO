@@ -18,7 +18,7 @@ public class Kunde {
 
     @Override
     public String toString() {
-        return  "" + kundenNr + ansprechperson.toString() ;
+        return  "" + kundenNr +" "+ ansprechperson.toString() ;
 
     }
 
