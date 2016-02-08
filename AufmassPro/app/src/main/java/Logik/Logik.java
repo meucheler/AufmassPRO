@@ -1,16 +1,22 @@
 package Logik;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 import Bauvorhaben.Bauvorhaben;
+import DB.DBHandler;
 import FirmaInfos.Firmendaten;
 import Immobilie.Immobilie;
 import Kunde.Ansprechperson;
 import Kunde.Kunde;
 import Raum.Raum;
+import DB.DBDAO;
+import DB.KundeDAO;
+import DB.SQLKunde;
+
 /**
  * Created by miken on 01.02.2016.
  */
@@ -22,18 +28,19 @@ public class Logik {
      */
 
 
-    /**public void erzeugeKunde(Kunde kunde){
-
+    public void erzeugeKunde(Kunde kunde){
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PRODUCTNAME, kunde.getProductName());
-        values.put(COLUMN_QUANTITY, product.getQuantity());
 
-        SQLiteDatabase db = this.getWritableDatabase();
+     //   values.put(DBHandler.KU_COLUMN_VORNAME, kunde.getAnsprechperson().getVorname());
+      //  values.put(DBHandler.KU_COLUMN_NACHNAME, kunde.getAnsprechperson().getNachname());
+      //  values.put(DBHandler.KU_COLUMN_TITEL, kunde.getAnsprechperson().getTitel());
+    //    values.put(DBHandler.KU_COLUMN_ZUSATZDATEN, kunde.getZusatzDaten());
 
-        db.insert(TABLE_PRODUCTS, null, values);
-        db.close();
 
-    }*/
+       // db.insert(DBHandler.TABLE_KUNDE, null, values);
+       // db.close();
+
+    }
     public void bearbeiteKunde(Kunde k){
 
     }
