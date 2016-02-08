@@ -123,12 +123,27 @@ public class Logik {
         llKunde.add(k1);
         return llKunde;
     }
+
+    LinkedList<Immobilie> llImmbo = new LinkedList<Immobilie>();
+    Immobilie im1 = new Immobilie();
+    Bauvorhaben bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibun (hier)","Bauvorhaben 1","Schwierig", llImmbo );
+    LinkedList<Bauvorhaben> llBauvo = new LinkedList<Bauvorhaben>();
+
     public LinkedList<Bauvorhaben> getBauvorhaben(){
-        return null;
+        llBauvo.add(bvh);
+        llBauvo.add(bvh);
+        llBauvo.add(bvh);
+        return llBauvo;
     }
+    LinkedList<Immobilie> llImmo12 = new LinkedList<Immobilie>();
+    LinkedList<Raum> llRau = new LinkedList<Raum>();
+    Immobilie b1 = new Immobilie(llRau, 2);
     public LinkedList<Immobilie> getImmobilie(){
-        return null;
+        llImmo12.add(b1);
+        return llImmo12;
     }
+
+    
     public LinkedList<Raum> getRaeume(int immoId){
         return null;
     }
