@@ -113,6 +113,17 @@ public class Logik {
     Ansprechperson a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
     Ansprechperson a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
     Ansprechperson a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
+    Ansprechperson a5 = new Ansprechperson("Andreas", "Burgstaller", "Tierarzt");
+
+    /*
+    Bauvorhaben wird von sebastian erstellt,
+    inder Logik gespeichert,
+    von der Logik in die Datenbank hochgeschossen
+
+
+
+      */
+
     Addresse adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
     Bankdaten b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
     Kontaktdaten kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
@@ -130,7 +141,7 @@ public class Logik {
 
     LinkedList<Immobilie> llImmbo = new LinkedList<Immobilie>();
     Immobilie im1 = new Immobilie();
-    Bauvorhaben bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibun (hier)","Bauvorhaben 1","Schwierig", llImmbo );
+    Bauvorhaben bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibung (hier)","Bauvorhaben 1","Schwierig", llImmbo );
     LinkedList<Bauvorhaben> llBauvo = new LinkedList<Bauvorhaben>();
 
     public LinkedList<Bauvorhaben> getBauvorhaben(){

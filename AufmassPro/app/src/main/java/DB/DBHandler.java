@@ -15,7 +15,7 @@ public class DBHandler extends SQLiteOpenHelper {
     //OnUpgrade sollte nochmal angesehen werden!!!!
     //Table Names
     static final String TABLE_BENUTZERINFO = "Benutzerinfo";
-    static final String TABLE_KUNDE = "Kunde";
+    public static final String TABLE_KUNDE = "Kunde";
     static final String TABLE_ADRESSE = "Adresse";
     static final String TABLE_BANKDATEN = "Bankdaten";
     static final String TABLE_KONTAKTDATEN = "Kontaktdaten";
@@ -42,15 +42,15 @@ public class DBHandler extends SQLiteOpenHelper {
     static final String BI_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Kunde
-    static final String KU_COLUMN_KUNDEN_NR = "KdNr";
-    static final String KU_COLUMN_VORNAME = "Vorname";
-    static final String KU_COLUMN_NACHNAME = "Nachname";
-    static final String KU_COLUMN_TITEL = "Titel";
-    static final String KU_COLUMN_USTID = "UstID";
-    static final String KU_COLUMN_ZUSATZDATEN = "Zusatzdaten";
-    static final String KU_FK_COLUMN_ADRESSE = "Adresse";
-    static final String KU_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
-    static final String KU_FK_COLUMN_BANKDATEN = "Bankdaten ID";
+    public static final String KU_COLUMN_KUNDEN_NR = "KdNr";
+    public static final String KU_COLUMN_VORNAME = "Vorname";
+    public static final String KU_COLUMN_NACHNAME = "Nachname";
+    public static final String KU_COLUMN_TITEL = "Titel";
+    public static final String KU_COLUMN_USTID = "UstID";
+    public static final String KU_COLUMN_ZUSATZDATEN = "Zusatzdaten";
+    public static final String KU_FK_COLUMN_ADRESSE = "Adresse";
+    public static final String KU_FK_COLUMN_KONTAKTDATEN = "Kontakt ID";
+    public static final String KU_FK_COLUMN_BANKDATEN = "Bankdaten ID";
 
     //Columns Bauvorhaben
     static final String BV_COLUMN_ID = "ID";
