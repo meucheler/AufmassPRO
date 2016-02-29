@@ -1,11 +1,20 @@
 package mikekevinsebitobi.aufmasspro;
 
-import android.os.Bundle;
 
+
+import android.app.ListActivity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -18,11 +27,11 @@ import Logik.Logik;
 /**
  * Created by Seby on 01.02.16.
  */
-public class ActListeKunden extends AppCompatActivity{
+public class ActListeKunden extends AppCompatActivity {
     LinkedList<String> spinnerItems;
     Logik logik;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_liste_kunden);
 
@@ -32,8 +41,8 @@ public class ActListeKunden extends AppCompatActivity{
 
         //Action Bar
 
-        ActionBar actBar = getSupportActionBar();
-        actBar.setTitle("Liste aller Kunden");
+        //ActionBar actBar = getActionBar();
+        //actBar.setTitle("Liste aller Kunden");
 
         //Spinner
         spinnerItems = new LinkedList<>();
@@ -51,8 +60,43 @@ public class ActListeKunden extends AppCompatActivity{
 
         ArrayAdapter<Kunde> kundeArrayAdapter = new ArrayAdapter<Kunde>(this,android.R.layout.simple_list_item_1,kundeLinkedList);
 
+
+
         lv.setAdapter(kundeArrayAdapter);
 
+        final EditText editTextPat = (EditText )findViewById(R.id.editTextKunden);
+        editTextPat.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterListe((ListView) findViewById(R.id.listViewKunden),editTextPat.getText().toString(),((Spinner)findViewById(R.id.spinnerKunden)).getSelectedItem().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        //list
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               //**
+                startIntentKunde((Kunde)((ListView)findViewById(R.id.listViewKunden)).getAdapter().getItem(position));
+            }
+        });
+
+        //menu new Kunde
+        MenuItem newKunde =(MenuItem) findViewById(R.id.menu_newKunde);
+        //newKunde.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        //    @Override
+        //    public boolean onMenuItemClick(MenuItem item) {
+        //        startIntentKunde();
+        //        return true;
+        //    }
+        //});
 
 
     }
@@ -65,9 +109,11 @@ public class ActListeKunden extends AppCompatActivity{
 
         LinkedList<Kunde> kundeLinkedList= logik.getKunden();
         for (Kunde k:kundeLinkedList) {
+            //Vorname
             if(filtSpinnVal.equals(spinnerItems.get(1)) && k.getAnsprechperson().getVorname().contains(filtTextVal)){
                 kundeLinkedList.remove(k);
             }
+            //Nachname
             if(filtSpinnVal.equals(spinnerItems.get(2)) && k.getAnsprechperson().getNachname().contains(filtTextVal)){
                 kundeLinkedList.remove(k);
             }
@@ -80,5 +126,14 @@ public class ActListeKunden extends AppCompatActivity{
 
         lv.setAdapter(kundeArrayAdapter);
     }
+    public void startIntentKunde(Kunde k){
+        Intent intent = new Intent(this, ActKunde.class);
+        intent.putExtra("Kunde",k);
+        startActivity(intent);
+    }
 
+    public void startIntentKunde(){
+        Intent intent = new Intent(this, ActKunde.class);
+        startActivity(intent);
+    }
 }
