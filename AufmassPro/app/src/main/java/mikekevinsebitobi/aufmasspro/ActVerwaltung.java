@@ -1,9 +1,12 @@
 package mikekevinsebitobi.aufmasspro;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class ActVerwaltung extends AppCompatActivity {
 
@@ -17,6 +20,14 @@ public class ActVerwaltung extends AppCompatActivity {
         //ActionBar actBar = getActionBar();
         //actBar.setTitle("ActVerwaltung");
         //actBar.show();
+
+        ((Button) findViewById(R.id.btnKunden)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startIntentListeKunden();
+
+            }
+        });
     }
 
     @Override
@@ -26,6 +37,8 @@ public class ActVerwaltung extends AppCompatActivity {
     }
 
 
-    //ActionBar
-    //ActionBar bar = getSupportActionBar();
+    public void startIntentListeKunden(){
+        Intent intent = new Intent(this, ActListeKunden.class);
+        startActivity(intent);
+    }
 }

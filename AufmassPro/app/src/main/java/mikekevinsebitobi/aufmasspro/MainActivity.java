@@ -1,6 +1,7 @@
 package mikekevinsebitobi.aufmasspro;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                setContentView(R.layout.activity_act_verwaltung);
+                startIntentVerwaltung();
             }
         });
 
@@ -85,5 +86,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void startIntentVerwaltung(){
+        Intent intent = new Intent(this, ActVerwaltung.class);
+        startActivity(intent);
     }
 }

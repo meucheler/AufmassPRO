@@ -41,8 +41,8 @@ public class ActListeKunden extends AppCompatActivity {
 
         //Action Bar
 
-        //ActionBar actBar = getActionBar();
-        //actBar.setTitle("Liste aller Kunden");
+        ActionBar actBar = getSupportActionBar();
+        actBar.setTitle("Liste aller Kunden");
 
         //Spinner
         spinnerItems = new LinkedList<>();
