@@ -84,8 +84,34 @@ public class Logik {
 
     }
     //--------------------------------------------------//
-    public LinkedList<Kunde> getKunde(){
-        return null;
+
+    public LinkedList<Kunde> getKundeSuche(int id, String anVorname, String anNachname){
+
+        LinkedList<Kunde> Kundenliste = getKunden();
+        LinkedList<Kunde> KuResultate = new LinkedList<>();
+        if(id != 0){
+            for (Kunde kAct : Kundenliste){
+                if(kAct.getKundenNr() == id){
+                    KuResultate.add(kAct);
+                }
+            }
+        }
+        if(anVorname != null){
+            for (Kunde kAct : Kundenliste) {
+                if(kAct.getAnsprechperson().getVorname().toLowerCase().contains(anVorname.toLowerCase())){
+                    KuResultate.add(kAct);
+                }
+            }
+        }
+        if (anNachname != null) {
+            for (Kunde kAct : Kundenliste) {
+                if(kAct.getAnsprechperson().getNachname().toLowerCase().contains(anNachname.toLowerCase())){
+                    KuResultate.add(kAct);
+                }
+            }
+        }
+
+        return KuResultate;
     }
     public LinkedList<Bauvorhaben> getBauvorhabenBuchhaltung(){
         return null;
