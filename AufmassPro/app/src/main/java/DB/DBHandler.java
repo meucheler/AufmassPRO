@@ -12,7 +12,6 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "aufmasspro.db";
     private static final int DATABASE_VERSION = 2;
 
-    //OnUpgrade sollte nochmal angesehen werden!!!!
     //Table Names
     static final String TABLE_BENUTZERINFO = "Benutzerinfo";
     static final String TABLE_KUNDE = "Kunde";
