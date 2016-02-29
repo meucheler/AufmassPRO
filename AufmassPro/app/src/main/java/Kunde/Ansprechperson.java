@@ -1,5 +1,7 @@
 package Kunde;
 
+import Logik.Logik;
+
 /**
  * Created by htl-ds-win7profNx64 on 14.12.2015.
  */
@@ -18,6 +20,7 @@ public class Ansprechperson {
         this.nachname = nachname;
         this.titel = titel;
     }
+ Logik l = new Logik();
 
     public Ansprechperson() {
     }
