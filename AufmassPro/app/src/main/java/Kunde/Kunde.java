@@ -1,5 +1,7 @@
 package Kunde;
 
+import java.io.Serializable;
+
 import Utils.Addresse;
 import Utils.Bankdaten;
 import Utils.Kontaktdaten;
@@ -7,7 +9,7 @@ import Utils.Kontaktdaten;
 /**
  * Created by htl-ds-win7profNx64 on 14.12.2015.
  */
-public class Kunde {
+public class Kunde implements Serializable{
     Ansprechperson ansprechperson;
     String zusatzDaten;
     Addresse addresse;
