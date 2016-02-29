@@ -5,11 +5,14 @@ package DB;
  */
 public class SQLKunde {
 
-    public static final String SQL_DROP = "DROP IF TABLE EXISTS " + DBHandler.TABLE_KUNDE;
+    public static final String SQL_DROP = "DROP TABLE IF EXISTS " + DBHandler.TABLE_KUNDE;
     public static final String SQL_CREATE = "create table " + DBHandler.TABLE_KUNDE
             + "(" + DBHandler.KU_COLUMN_KUNDEN_NR + " number(10) primary key, " + DBHandler.KU_COLUMN_TITEL + " varchar(10), "
             + DBHandler.KU_COLUMN_VORNAME + " varchar(25), " + DBHandler.KU_COLUMN_NACHNAME + " varchar(25), "
             + DBHandler.KU_COLUMN_USTID + " number(10), " + DBHandler.KU_COLUMN_ZUSATZDATEN + " varchar(100), "
+            + DBHandler.KU_FK_COLUMN_ADRESSE + " number(10), "
+            + DBHandler.KU_FK_COLUMN_KONTAKTDATEN + " number(10), "
+            + DBHandler.KU_FK_COLUMN_BANKDATEN + " varchar(24), "
             + " FOREIGN KEY (" + DBHandler.KU_FK_COLUMN_ADRESSE + ") REFERENCES " + DBHandler.TABLE_ADRESSE + "(" + DBHandler.AD_COLUMN_ID + "), "
             + " FOREIGN KEY (" + DBHandler.KU_FK_COLUMN_KONTAKTDATEN + ") REFERENCES " + DBHandler.TABLE_KONTAKTDATEN + "(" + DBHandler.KA_COLUMN_ID + "), "
             + " FOREIGN KEY (" + DBHandler.KU_FK_COLUMN_BANKDATEN + ") REFERENCES " + DBHandler.TABLE_BANKDATEN + "(" + DBHandler.BA_COLUMN_IBAN + "));";
