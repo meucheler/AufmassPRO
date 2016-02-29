@@ -90,13 +90,13 @@ public class ActListeKunden extends AppCompatActivity {
 
         //menu new Kunde
         MenuItem newKunde =(MenuItem) findViewById(R.id.menu_newKunde);
-        //newKunde.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-        //    @Override
-        //    public boolean onMenuItemClick(MenuItem item) {
-        //        startIntentKunde();
-        //        return true;
-        //    }
-        //});
+        newKunde.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                startIntentKunde();
+                return true;
+            }
+        });
 
 
     }
@@ -107,20 +107,20 @@ public class ActListeKunden extends AppCompatActivity {
 
     public void filterListe(ListView lv, String filtTextVal, String filtSpinnVal){
 
-        LinkedList<Kunde> kundeLinkedList= logik.getKunden();
-        for (Kunde k:kundeLinkedList) {
-            //Vorname
-            if(filtSpinnVal.equals(spinnerItems.get(1)) && k.getAnsprechperson().getVorname().contains(filtTextVal)){
-                kundeLinkedList.remove(k);
-            }
-            //Nachname
-            if(filtSpinnVal.equals(spinnerItems.get(2)) && k.getAnsprechperson().getNachname().contains(filtTextVal)){
-                kundeLinkedList.remove(k);
-            }
+        LinkedList<Kunde> kundeLinkedList = logik.getKunden();
 
-
-
+        //Vorname
+        if(filtSpinnVal.equals(spinnerItems.get(1)) ){
+            //kundeLinkedList.remove(k);
         }
+        //Nachname
+        if(filtSpinnVal.equals(spinnerItems.get(2)) ){
+            //kundeLinkedList.remove(k);
+        }
+
+
+
+
 
         ArrayAdapter<Kunde> kundeArrayAdapter = new ArrayAdapter<Kunde>(this,android.R.layout.simple_list_item_1,kundeLinkedList);
 
