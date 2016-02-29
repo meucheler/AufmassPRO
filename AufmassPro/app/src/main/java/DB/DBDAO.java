@@ -12,7 +12,7 @@ import Kunde.Kunde;
  * Created by tobia_000 on 25.01.2016.
  */
 public class DBDAO {
-
+//Diese Klasse wird vorlaeufig nicht benoetigt
     protected SQLiteDatabase database;
     private DBHandler dbHandler;
 
