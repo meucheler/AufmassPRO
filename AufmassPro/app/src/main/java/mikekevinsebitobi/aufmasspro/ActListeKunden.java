@@ -109,18 +109,23 @@ public class ActListeKunden extends AppCompatActivity {
 
         LinkedList<Kunde> kundeLinkedList = logik.getKunden();
 
+        //ID
+        if(filtSpinnVal.equals(spinnerItems.get(0)) ){
+            try {
+                int id = Integer.parseInt(filtTextVal);
+                kundeLinkedList=logik.getKundeSuche(id, null, null);
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         //Vorname
         if(filtSpinnVal.equals(spinnerItems.get(1)) ){
-            //kundeLinkedList.remove(k);
+            kundeLinkedList=logik.getKundeSuche(0, filtTextVal,null);
         }
         //Nachname
         if(filtSpinnVal.equals(spinnerItems.get(2)) ){
-            //kundeLinkedList.remove(k);
+            kundeLinkedList=logik.getKundeSuche(0,null, filtTextVal);
         }
-
-
-
-
 
         ArrayAdapter<Kunde> kundeArrayAdapter = new ArrayAdapter<Kunde>(this,android.R.layout.simple_list_item_1,kundeLinkedList);
 
