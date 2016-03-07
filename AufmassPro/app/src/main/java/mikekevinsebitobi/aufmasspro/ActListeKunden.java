@@ -89,14 +89,14 @@ public class ActListeKunden extends AppCompatActivity {
         });
 
         //menu new Kunde
-        MenuItem newKunde =(MenuItem) findViewById(R.id.menu_newKunde);
-        newKunde.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                startIntentKunde();
-                return true;
-            }
-        });
+        //MenuItem newKunde =(MenuItem) findViewById(R.id.menu_newKunde);
+        //newKunde.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        //    @Override
+        //    public boolean onMenuItemClick(MenuItem item) {
+        //        startIntentKunde();
+        //        return true;
+        //    }
+        //});
 
 
     }

@@ -20,11 +20,23 @@ public class ActVerwaltung extends AppCompatActivity {
         ActionBar actBar = getSupportActionBar();
         actBar.setTitle("ActVerwaltung");
 
+        final Button btnKunden = (Button) findViewById(R.id.btnKunden);
+        final Button btnBauvorhaben = (Button) findViewById(R.id.btnProjekte);
 
-        ((Button) findViewById(R.id.btnKunden)).setOnClickListener(new View.OnClickListener() {
+        //Btn zu Kundenliste
+        btnKunden.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startIntentListeKunden();
+
+            }
+        });
+
+        //Btn zu BauvorhabenListe
+        btnBauvorhaben.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startIntentListeBauvorhaben();
 
             }
         });
@@ -32,13 +44,17 @@ public class ActVerwaltung extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_act_verwalt,menu);
+        getMenuInflater().inflate(R.menu.menu_act_verwalt, menu);
         return true;
     }
 
 
     public void startIntentListeKunden(){
         Intent intent = new Intent(this, ActListeKunden.class);
+        startActivity(intent);
+    }
+    public void startIntentListeBauvorhaben(){
+        Intent intent = new Intent(this, ActListeBauvorhaben.class);
         startActivity(intent);
     }
 }
