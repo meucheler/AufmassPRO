@@ -26,6 +26,21 @@ import Utils.Kontaktdaten;
 public class Logik {
 
 
+    public Logik() {
+        a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
+        a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
+        a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
+        a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
+        a5 = new Ansprechperson("Andreas", "Burgstaller", "Tierarzt");
+        adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
+        b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
+        kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
+        k1 = new Kunde(a1, "Zusatzdaten", adress1, kon1, 1, "20%", b1);
+        k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
+        k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
+        k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
+    }
+
     /**
      * Created by miken on 18.01.2016.
      */
@@ -86,7 +101,6 @@ public class Logik {
     //--------------------------------------------------//
 
     public LinkedList<Kunde> getKundeSuche(int id, String anVorname, String anNachname){
-
         LinkedList<Kunde> Kundenliste = getKunden();
         LinkedList<Kunde> KuResultate = new LinkedList<>();
         if(id != 0){
@@ -135,11 +149,11 @@ public class Logik {
     //--------------------------Aufmaß------------------------//
     LinkedList<Kunde> llKunde = new LinkedList<Kunde>();
 
-    Ansprechperson a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
-    Ansprechperson a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
-    Ansprechperson a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
-    Ansprechperson a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
-    Ansprechperson a5 = new Ansprechperson("Andreas", "Burgstaller", "Tierarzt");
+    Ansprechperson a1;
+    Ansprechperson a2;
+    Ansprechperson a3;
+    Ansprechperson a4;
+    Ansprechperson a5;
 
     /*
     Bauvorhaben wird von sebastian erstellt,
@@ -150,13 +164,13 @@ HAlllo
 
       */
 
-    Addresse adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
-    Bankdaten b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
-    Kontaktdaten kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
-    Kunde k1 = new Kunde(a1, "Zusatzdaten", adress1, kon1, 1, "20%", b1);
-    Kunde k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
-    Kunde k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
-    Kunde k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
+    Addresse adress1;
+    Bankdaten b1;
+    Kontaktdaten kon1;
+    Kunde k1;
+    Kunde k2;
+    Kunde k3;
+    Kunde k4;
     public LinkedList<Kunde> getKunden(){
         llKunde.add(k1);
         llKunde.add(k2);
@@ -214,6 +228,7 @@ HAlllo
     }
     // public LinkedList<Aufmass> getAufmass(){
     //     return null;
+    //     KKK
     //}
     public void bearbeiteAufmass(int aufID){
 
