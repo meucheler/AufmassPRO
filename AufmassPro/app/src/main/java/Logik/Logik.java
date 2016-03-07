@@ -39,6 +39,7 @@ public class Logik {
         k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
         k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
         k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
+        bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibung (hier)","Bauvorhaben 1","Schwierig", llImmbo );
     }
 
     /**
@@ -181,7 +182,7 @@ HAlllo
 
     LinkedList<Immobilie> llImmbo = new LinkedList<Immobilie>();
     Immobilie im1 = new Immobilie();
-    Bauvorhaben bvh = new Bauvorhaben(1, adress1, k1.getKundenNr(), " Beschreibung (hier)","Bauvorhaben 1","Schwierig", llImmbo );
+    Bauvorhaben bvh;
     LinkedList<Bauvorhaben> llBauvo = new LinkedList<Bauvorhaben>();
 
     public LinkedList<Bauvorhaben> getBauvorhaben(){
