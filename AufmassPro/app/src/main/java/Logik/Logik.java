@@ -27,25 +27,38 @@ public class Logik {
 
 
     public Logik() {
-        a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
-        a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
-        a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
-        a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
-        a5 = new Ansprechperson("Andreas", "Burgstaller", "Tierarzt");
-        adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
-        b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
-        kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
-        k1 = new Kunde(a1, "Zusatzdaten", adress1, kon1, 1, "20%", b1);
-        k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
-        k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
-        k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
-        bvh = new Bauvorhaben();
+        /*a1 = new Ansprechperson();
+        a2 = new Ansprechperson();
+        a3 = new Ansprechperson();
+        a4 = new Ansprechperson();
+        a5 = new Ansprechperson();
+        adress1 = new Addresse();
+        b1 = new Bankdaten();
+        kon1 = new Kontaktdaten();
+        k1 = new Kunde();
+        k2 = new Kunde();
+        k3 = new Kunde();
+        k4 = new Kunde();
+        bvh = new Bauvorhaben();*/
     }
 
     /**
      * Created by miken on 18.01.2016.
+     * a1 = new Ansprechperson("Kevin", "Indinger" , "Dr.");
+     a2 = new Ansprechperson("Sebastian", "Bernhart" , "DDr.");
+     a3 = new Ansprechperson("Tobias", "Doppler" , "Pädagoge");
+     a4 = new Ansprechperson("Michael", "Nimmervoll" , "Meister");
+     a5 = new Ansprechperson("Andreas", "Burgstaller", "Tierarzt");
+     adress1 = new Addresse(4710,"Grieskirchen", "Lagestrasse", "12");
+     b1 = new Bankdaten("Raiffeisen Bank", 34736, "7923742398", "0012 2812 9213 1293", "");
+     kon1 = new Kontaktdaten(1, "kejahi@gmail.com","0680 323 21212","Fax -lol");
+     k1 = new Kunde(a1, "Zusatzdaten", adress1, kon1, 1, "20%", b1);
+     k2 = new Kunde(a2, "Zusatzdaten", adress1, kon1, 2, "20%", b1);
+     k3 = new Kunde(a3, "Zusatzdaten", adress1, kon1, 3, "20%", b1);
+     k4 = new Kunde(a4, "Zusatzdaten", adress1, kon1, 4, "20%", b1);
+     bvh = new Bauvorhaben();
      */
-//1, adress1, k1.getKundenNr(), " Beschreibung (hier)","Bauvorhaben 1","Schwierig", llImmbo 
+//1, adress1, k1.getKundenNr(), " Beschreibung (hier)","Bauvorhaben 1","Schwierig", llImmbo
 
     public void erzeugeKunde(Kunde kunde){
         //ContentValues values = new ContentValues();
